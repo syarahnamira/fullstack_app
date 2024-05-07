@@ -1,13 +1,13 @@
-// oauth.js
+require('dotenv').config({path: '../.env'});
+
 const passport = require("passport");
 const OAuth2Strategy = require("passport-oauth2").Strategy;
 const jwt = require("jsonwebtoken");
 const uuid = require("uuid").v4;
 
-const secretKey = "superrahasia";
-const clientID =
-  "1018282106828-asg6232mcdiui0k50k36utu60oeq831p.apps.googleusercontent.com";
-const clientSecret = "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";
+const secretKey = process.env.SECRET_KEY; 
+const clientID = process.env.CLIENT_ID; 
+const clientSecret = process.env.CLIENT_SECRET; 
 
 passport.use(
   "oauth2",

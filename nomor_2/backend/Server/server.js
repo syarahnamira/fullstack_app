@@ -1,8 +1,8 @@
 const express = require("express");
 const session = require("express-session");
-const passport = require("./oauth");
+const passport = require("../Oauth2/oauth");
 const cookieParser = require("cookie-parser");
-const authRoutes = require("./authRoutes");
+const authRoutes = require("../Route/authRoute");
 
 const app = express();
 const PORT = 3000;
